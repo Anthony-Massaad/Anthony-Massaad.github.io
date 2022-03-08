@@ -1,0 +1,277 @@
+@media only screen and (max-width: 1050px){
+    #fixed-nav .menu-btn{
+        display: flex;
+    }  
+    
+    #fixed-nav .reg-nav{
+        display: none;
+    }
+
+    #fixed-nav .sidebar{
+        display: block;
+    }
+
+    #fixed-nav .sidebar li{
+        display: list-item;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    header{
+        height: auto;
+        min-height: auto;
+        padding: 365px 15px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+
+    
+    #fixed-nav .sidebar{
+        width: 40%;
+    }
+    #fixed-nav .sidebar.active{
+        left: 70%;
+    }
+
+    footer .copyright{
+        text-align: center;
+    }
+
+    #projects .project-info ul{
+        padding: 0;
+    }
+
+    #projects .project-display{
+        text-align: center;
+        display: block;
+    }
+    
+    #projects .project-display .proj-img{
+        float: none;
+        width: auto;
+        padding-top: 10px;
+    }
+
+    #projects .project-display .proj-img img{
+        height: fit-content;
+        width: 10em;
+        border-radius: 50px;
+    }
+
+    #projects .project-info{
+        position: relative;
+        margin: 0;
+        top: auto;
+        right: 5%;
+        transform: none;
+        margin: 0;
+        width: 100%;
+        clear: both;
+        padding-top: 0;
+        padding-bottom: 10px;
+    }
+
+    .date{
+        float: none;
+    }
+
+    #experience .work-experience h3{
+        margin-bottom: 0;
+    }
+
+    #experience .work-experience h4{
+        margin-bottom: 25px;
+    }
+
+    #educaction .education-block ul{
+        clear: both;
+    }
+
+    #education .education-block ul li{
+        padding-bottom: 5px;
+    }
+    
+    #education .education-block h3{
+        margin-top: 22px;
+        font-size: 1.10em;
+    }
+
+    #education .education-block h4{
+        font-size: 0.925em;
+        margin-bottom: 40px;
+    }
+
+    #education .ed-info{
+        margin-top: 15px;
+    }
+
+    #education .education-block ul{
+        text-align: center;
+        list-style-position: inside;
+    }
+
+    header #port-header h1{
+        font-size: 2.5em;
+    }
+
+    header #port-header h3{
+        font-size: 1.75em;
+    }
+
+    header #port-header .social-network{
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 570px){
+    #fixed-nav .sidebar{
+        width: 50%;
+    }
+    
+    #fixed-nav .sidebar.active{
+        left: 60%;
+    }
+
+    #experience .work-experience h4{
+        margin-bottom: 0;
+        font-size: 1.05em;
+    }
+
+    header #port-header {
+        padding: 0;
+    }
+
+    header #port-header h1{
+        font-size: 2em;
+    }
+
+    header #port-header h3{
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 550px){
+
+    #education .date{
+        font-size: 0.9em;
+    }
+
+    #experience .work-experience img{
+        margin: 0;
+        float: none;
+    }
+
+    #experience .work-experience{
+        text-align: center;
+    }
+
+    #experience .work-experience ul{
+        text-align: left;
+    }
+
+    #experience .job-container{
+        text-align: center;
+    }
+
+    #experience .work-experience h4{
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 480px){
+
+    #projects .all-projects{
+        display: block;
+    }
+
+    #projects .single-proj{
+        display: none;
+    }
+
+    #projects #lst-projects{
+        display: none;
+    }
+
+    #education .date{
+        font-size: 1.12em;
+    }
+
+    #fixed-nav .sidebar{
+        width: 80%;
+    }
+    #fixed-nav .sidebar.active{
+        left: 30%;
+    }
+
+    #fixed-nav #name{
+        font-size: 1.125em;
+        font-weight: 1500;
+        padding-top: 3px;
+    }
+
+    #education .education-block{
+        text-align: center;
+        padding: 0;
+        padding-top: 16px;
+    }
+
+    #education .education-block ul li{
+        display: flex;
+    }
+
+    #education .education-block ul li::before{
+        display: list-item;
+        content: "";
+    }
+
+    #education .education-block ul{
+        text-align: left;
+        padding: 0;
+        list-style-position: inside;
+        margin-left: 20px;
+        padding: 0 0 0 15px;
+        margin-right: 20px;
+    }
+
+    #education .ed-logo img{
+        text-align: center;
+        float: none;
+        margin: 0;
+    }
+
+    #education .education-block h5{
+        padding: 0;
+        margin: 10px 0 0 0;
+    }
+
+    #education .education-block h3{
+        margin: 0 0 0 0;
+        display: none;
+    }
+
+    #education .education-block h4{
+        margin: 0;
+    }
+
+    header #port-header h1{
+        font-size: 1.25em;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    header #port-header h3{
+        font-size: 0.925em;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    header #port-header .social-network{
+        padding: 7px 10px;    
+    }
+
+    footer .copyright{
+        font-size: 0.725em;
+    }
+
+}
