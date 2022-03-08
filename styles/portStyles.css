@@ -294,7 +294,7 @@ header{
     min-height: 500px;
     max-height: 1080px;
     overflow: hidden;
-    background-image: url("/images/heading/LeadBackground2.png");
+    background-image: url("images/heading/LeadBackground2.png");
     background-size: cover;
 }
 
