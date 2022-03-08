@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
         <link rel="stylesheet" href="styles/bootstrap.min.css">
         <link rel="stylesheet" href="styles/portStyles.css">
         <link rel="stylesheet" href="styles/media.css">
@@ -39,19 +40,14 @@
                 <section id="port-header" >
                     <h1>ANTHONY MASSAAD</h1>
                     <h3>Software Engineering Student</h3>
-                    <h3>At Carleton University</h3>
+                    <h3>Carleton University</h3>
                     <hr>
                     <aside>
                         <button class="link-btn">
                             <a href="">Open Resume</a>
-                            <img src="./images//heading/arrow.svg" alt="">
+                            <img src="images//heading/whiteArrow.png" alt="">
                         </button>
                     </aside>
-
-                    <!--
-                    <aside id="social-network-bar">
-                        <a href="" target="_blank" class="social-network">Open Resume</a>
-                    </aside>-->
                 </section>
             </div>
         </header>
@@ -64,7 +60,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-4 prof-img">
-                        <img class="img-thumbnail" src="./images/about/tony.png" alt="Profile Picture">
+                        <img class="img-thumbnail" src="images/about/tony.png" alt="Profile Picture">
                     </div>
                     <div class="col-lg-8">
                         <p>
@@ -90,7 +86,7 @@
                     <div class="col-md-12">
                         <div class="work-experience shadow col-md-12">
                             <div class="job-container">
-                                <img src="./images/experience/Elections.PNG" alt="Election Canada Logo Logo">
+                                <img src="images/experience/Elections.PNG" alt="Election Canada Logo Logo">
                             </div>
                             <div>
                                 <h3>Elections Canada</h3>
@@ -120,7 +116,7 @@
                     <div class="col-md-12">
                         <div class="work-experience shadow col-md-12">
                             <div class="job-container">
-                                <img src="./images/experience/CT.png" alt="Canadian Tire Logo">
+                                <img src="images/experience/CT.png" alt="Canadian Tire Logo">
                             </div>
                             <div>
                                 <h3>Canadian Tire</h3>
@@ -155,7 +151,7 @@
                 <div class="block">
                     <div class="education-block shadow">
                         <div class="ed-logo">
-                            <img src="./images/education/CarletonLogo.png" alt="Carleton University logo">
+                            <img src="images/education/CarletonLogo.png" alt="Carleton University logo">
                         </div>
                         <div class="ed-info">
                             <h5 class="date">September 2019 - PRESENT</h5>
@@ -172,7 +168,10 @@
                         </ul>
                         
                     </div>
-                    <a href="documents/Grades.pdf" target="_blank" class="social-network grades">Grades</a>
+                    <button class="link-btn grades">
+                        <a href="">View Grades</a>
+                        <img src="images//heading/arrow.svg" alt="">
+                    </button>
                 </div>
             </div>
             
@@ -184,33 +183,49 @@
                     <h2>Skills</h2>
                     <hr>
                 </div>
-                <div class="skill-body">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>PHP</li>
-                        <li>SQL</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>C</li>
-                        <li>C++</li>
-                        <li>C#</li>
-                        <li>Javascript</li>
+                <div class="row skill-body">
+                    <ul class="col-md-12 col-lg-6">
+                        <li>
+                            <div class="skill">Python</div>
+                            <div class="meter"><span class="bar" style="width: 70%;"></span></div>
+                        </li>
+                        <li>
+                            <div class="skill">PHP</div>
+                            <div class="meter"><span class="bar" style="width: 65%;"></span></div>
+                        </li>
+                        <li>
+                            <div class="skill">SQL</div>
+                            <div class="meter"><span class="bar" style="width: 45%;"></span></div>
+                        </li>
+                        <li>
+                            <div class="skill">HTML</div>
+                            <div class="meter"><span class="bar" style="width: 100%;"></span></div>
+                        </li>
+                        <li>
+                            <div class="skill">CSS</div>
+                            <div class="meter"><span class="bar" style="width: 60%;"></span></div>
+                        </li>
+                    </ul>
+                    <ul class="col-md-12 col-lg-6">
+                        <li>
+                            <div class="skill">C</div>
+                            <div class="meter"><span class="bar" style="width: 30%;"></span></div>
+                        </li>
+                        <li>
+                            <div class="skill">C++</div>
+                            <div class="meter"><span class="bar" style="width: 20%;"></span></div>
+                        </li>
+                        <li>
+                            <div class="skill">JavaScript</div>
+                            <div class="meter"><span class="bar" style="width: 45%;"></span></div>
+                        </li>
+                        <li>
+                            <div class="skill">Java</div>
+                            <div class="meter"><span class="bar" style="width: 60%;"></span></div>
+                        </li>
                     </ul>
                 </div>
-                <div class="skill-body">
-                    <h3>Favorable Tools</h3>
-                    <ul>
-                        <li>Visual Studio Code</li>
-                        <li>Eclipse</li>
-                        <li>Intellij</li>
-                        <li>Pycharm</li>
-                        <li>Sublime Text</li>
-                        <li>MS Word</li>
-                        <li>MS Excel</li>
-                    </ul>
-                </div>
+
             </div> 
         </section>
 
@@ -232,7 +247,7 @@
                     </ul>
                     <div id="project-content" class="project-display shadow single-proj">
                         <div class="proj-img">
-                            <img src="./images/projects/Tetris.png" alt="">
+                            <img src="images/projects/Tetris.png" alt="">
                         </div>
                         <div class="project-info">
                             <h3>Tetris</h3>
@@ -249,7 +264,7 @@
                     <div class="all-projects">
                         <div id="project-content" class="project-display shadow">
                             <div class="proj-img">
-                                <img src="./images/projects/Tetris.png" alt="">
+                                <img src="images/projects/Tetris.png" alt="">
                             </div>
                             <div class="project-info">
                                 <h3>Tetris</h3>
@@ -265,7 +280,7 @@
 
                         <div id="project-content" class="project-display shadow">
                             <div class="proj-img">
-                                <img src="./images/projects/ChatBot.png" alt="">
+                                <img src="images/projects/ChatBot.png" alt="">
                             </div>
                             <div class="project-info">
                                 <h3>Chat Bot</h3>
@@ -288,7 +303,7 @@
 
                         <div id="project-content" class="project-display shadow">
                             <div class="proj-img">
-                                <img src="./images/projects/PaintStore.png" alt="">
+                                <img src="images/projects/PaintStore.png" alt="">
                             </div>
                             <div class="project-info">
                                 <h3>Art Store</h3>
@@ -312,7 +327,7 @@
 
                         <div id="project-content" class="project-display shadow">
                             <div class="proj-img">
-                                <img src="./images/projects/VirtualShop.png" alt="">
+                                <img src="images/projects/VirtualShop.png" alt="">
                             </div>
                             <div class="project-info">
                                 <h3>Virtual Shop</h3>
@@ -337,7 +352,7 @@
                        
                         <div id="project-content" class="project-display shadow">
                             <div class="proj-img">
-                                <img src="./images/projects/Monopoly.png" alt="">
+                                <img src="images/projects/Monopoly.png" alt="">
                             </div>
                             <div class="project-info">
                                 <h3>Chat Bot</h3>
@@ -361,7 +376,7 @@
                        
                         <div id="project-content" class="project-display shadow">
                             <div class="proj-img">
-                                <img src="./images/projects/PathAlgo.png" alt="">
+                                <img src="images/projects/PathAlgo.png" alt="">
                             </div>
                             <div class="project-info">
                                 <h3>Path Finding Algorithm</h3>
@@ -381,7 +396,7 @@
                        
                         <div id="project-content" class="project-display shadow">
                             <div class="proj-img">
-                                <img src="./images/projects/Sedoku.png" alt="">
+                                <img src="images/projects/Sedoku.png" alt="">
                             </div>
                             <div class="project-info">
                                 <h3>Sedoku Solver/game</h3>
@@ -413,19 +428,19 @@
                 </div>  
                 <div class="row">
                     <a href="mailto:massaadanthony@hotmail.com">
-                        <img src="./images/contact/at.svg" alt="At Contact symbol">
+                        <img src="images/contact/at.svg" alt="At Contact symbol">
                         <span>massaadanthony@hotmail.com</span>
                     </a>
                     <a href="" class="pad">
-                        <img src="./images/contact/github-square.svg" alt="Github logo">
+                        <img src="images/contact/github-square.svg" alt="Github logo">
                         <span>tony1bally</span>
                     </a>
                     <a href="" class="pad">
-                        <img src="./images/contact/linkedin-square.svg" alt="Linkedin logo">
+                        <img src="images/contact/linkedin-square.svg" alt="Linkedin logo">
                         <span>Anthony Massaad</span>
                     </a>
                     <a href="" class="pad">
-                        <img src="./images/contact/instagram-icon-png-white-2.jpg" alt="Instagram logo">
+                        <img src="images/contact/instagram-icon-png-white-2.jpg" alt="Instagram logo">
                         <span>tony1bally</span>
                     </a>
                 </div>
@@ -439,7 +454,7 @@
                         <p>© 2022 Anthony Massaad.</p>
                     </div>
                     <div class="col-sm-2 arrow-up">
-                        <a href="#top-page"><img src="./images/footer/topArrow.png" alt=""></a>
+                        <a href="#top-page"><img src="images/footer/topArrow.png" alt=""></a>
                     </div>
                 </div>
             </div>

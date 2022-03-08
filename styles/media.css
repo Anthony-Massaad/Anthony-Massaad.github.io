@@ -24,8 +24,29 @@
     }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 800px){
+    header #port-header h1{
+        font-size: 4em;
+    }
 
+    header #port-header h3{
+        font-size: 1.75em;
+    }
+
+    header #port-header .social-network{
+        padding: 10px 20px;
+    }
+}
+
+
+@media only screen and (max-width: 640px){
+    header #port-header h1{
+        font-size: 3.25em;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
     
     #fixed-nav .sidebar{
         width: 40%;
@@ -110,18 +131,6 @@
         text-align: center;
         list-style-position: inside;
     }
-
-    header #port-header h1{
-        font-size: 2.5em;
-    }
-
-    header #port-header h3{
-        font-size: 1.75em;
-    }
-
-    header #port-header .social-network{
-        padding: 10px 20px;
-    }
 }
 
 @media only screen and (max-width: 570px){
@@ -143,7 +152,7 @@
     }
 
     header #port-header h1{
-        font-size: 2em;
+        font-size: 3em;
     }
 
     header #port-header h3{
@@ -254,14 +263,22 @@
         margin: 0;
     }
 
+    header #port-header .link-btn a{
+        font-size: 0.925em;
+    }
+
+    header #port-header .link-btn img{
+        height: 20px;
+    }
+
     header #port-header h1{
-        font-size: 1.25em;
+        font-size: 1.75em;
         padding-right: 0;
         padding-left: 0;
     }
 
     header #port-header h3{
-        font-size: 0.925em;
+        font-size: 1em;
         padding-left: 6px;
         padding-right: 6px;
     }

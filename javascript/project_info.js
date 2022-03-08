@@ -2,7 +2,7 @@ const PROJECTS = {
     "Tetris": 
         `
         <div class="proj-img">
-        <img src="./images/projects/Tetris.png" alt="">
+        <img src="images/projects/Tetris.png" alt="">
         </div>
         <div class="project-info">
             <h3>Tetris</h3>
@@ -19,7 +19,7 @@ const PROJECTS = {
     "Chat Bot": 
         `
         <div class="proj-img">
-            <img src="./images/projects/ChatBot.png" alt="">
+            <img src="images/projects/ChatBot.png" alt="">
         </div>
         <div class="project-info">
             <h3>Chat Bot</h3>
@@ -43,7 +43,7 @@ const PROJECTS = {
     "Art Store":
         `
         <div class="proj-img">
-        <img src="./images/projects/PaintStore.png" alt="">
+        <img src="images/projects/PaintStore.png" alt="">
         </div>
         <div class="project-info">
             <h3>Art Store</h3>
@@ -68,7 +68,7 @@ const PROJECTS = {
     "Virtual Shop":
         `
         <div class="proj-img">
-            <img src="./images/projects/VirtualShop.png" alt="">
+            <img src="images/projects/VirtualShop.png" alt="">
         </div>
         <div class="project-info">
             <h3>Virtual Shop</h3>
@@ -94,7 +94,7 @@ const PROJECTS = {
     "Monopoly":
         `
         <div class="proj-img">
-            <img src="./images/projects/Monopoly.png" alt="">
+            <img src="images/projects/Monopoly.png" alt="">
         </div>
         <div class="project-info">
             <h3>Chat Bot</h3>
@@ -119,7 +119,7 @@ const PROJECTS = {
     "Path Finding Algorithm":
         `
         <div class="proj-img">
-            <img src="./images/projects/PathAlgo.png" alt="">
+            <img src="images/projects/PathAlgo.png" alt="">
         </div>
         <div class="project-info">
             <h3>Path Finding Algorithm</h3>
@@ -140,7 +140,7 @@ const PROJECTS = {
     "Sedoku Solver/Game":
         `
         <div class="proj-img">
-            <img src="./images/projects/Sedoku.png" alt="">
+            <img src="images/projects/Sedoku.png" alt="">
         </div>
         <div class="project-info">
             <h3>Sedoku Solver/game</h3>
