@@ -47,6 +47,14 @@ h5{
         0 3px 8px rgb(0 0 0 / 15%);
 }
 
+.alternate-shadow{
+    box-shadow: 
+        0 0px 5px rgba(160 51 142 / 45%), 
+        0 0px 5px rgb(160 51 142 / 50%),
+        0 1px 5px rgba(160 51 142 / 45%), 
+        0 1px 5px rgb(160 51 142 / 50%);
+}
+
 .link-btn{
     border: 2px solid #f5f5f5;
     background: linear-gradient(to right, rgb(153, 212, 231)  50%, salmon 50%) left;
@@ -450,10 +458,6 @@ header #port-header h3, header #port-header h1{
 
 /* SKILLS */
 
-#skills .heading hr{
-    margin-bottom: 10px;
-}
-
 #skills ul{
     list-style: none;
     margin: 0;
@@ -472,7 +476,8 @@ header #port-header h3, header #port-header h1{
 #skills li .skill{
     font-weight: bold;
     flex-basis: 30%;
-    color: black;
+    color: #434242;
+    font-size: 15px;
 }
 
 #skills ul li .meter{
@@ -480,9 +485,6 @@ header #port-header h3, header #port-header h1{
     height: 25px;
     width: 100%;
     border: 4px solid white;
-    box-shadow: 
-        0 3px 8px rgba(160, 51, 142, 0.3), 
-        0 3px 8px rgba(160, 51, 142, 0.3);
 }
 
 #skills li .meter .bar {
@@ -568,6 +570,7 @@ header #port-header h3, header #port-header h1{
     display: none;
 }
 
+
 #projects .project-display h3, #projects .project-display h4, #projects .project-display a{
     position: relative;
     left: 5%;
@@ -592,8 +595,8 @@ header #port-header h3, header #port-header h1{
 }
 
 #projects .project-display h3{
-    font-size: 1.5em;
-    font-weight: 300;
+    font-size: 2em;
+    font-weight: 400;
     margin: 10px 0 10px 0;
     text-align: center;
 }

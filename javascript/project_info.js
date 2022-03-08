@@ -137,13 +137,13 @@ const PROJECTS = {
         </div>
         `,
 
-    "Sedoku Solver/Game":
+    "Sudoku Solver/Game":
         `
         <div class="proj-img">
             <img src="images/projects/Sedoku.png" alt="">
         </div>
         <div class="project-info">
-            <h3>Sedoku Solver/game</h3>
+            <h3>Sudoku Solver/game</h3>
             <h4>Language(s): Python</h4>
             <ul>
                 <li>

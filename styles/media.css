@@ -32,10 +32,6 @@
     header #port-header h3{
         font-size: 1.75em;
     }
-
-    header #port-header .social-network{
-        padding: 10px 20px;
-    }
 }
 
 
@@ -283,9 +279,6 @@
         padding-right: 6px;
     }
 
-    header #port-header .social-network{
-        padding: 7px 10px;    
-    }
 
     footer .copyright{
         font-size: 0.725em;
