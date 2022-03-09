@@ -97,7 +97,7 @@ const PROJECTS = {
             <img src="../images/project/Monopoly.png" alt="">
         </div>
         <div class="project-info">
-            <h3>Chat Bot</h3>
+            <h3>Monopoly</h3>
             <h4>Language(s): Java, XML</h4>
             <ul>
                 <li>
