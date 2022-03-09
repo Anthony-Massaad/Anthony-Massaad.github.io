@@ -43,15 +43,22 @@ h5{
 
 .shadow{
     box-shadow: 
-        0 3px 8px rgb(0 0 0 / 8%), 
-        0 3px 8px rgb(0 0 0 / 15%);
+        0 0px 5px rgb(0 0 0 / 45%), 
+        0 0px 5px rgb(0 0 0 / 50%),
+        0 1px 5px rgb(0 0 0 / 45%), 
+        0 1px 5px rgb(0 0 0 / 50%);
 }
 
 .alternate-shadow{
+    /*box-shadow: 
+        0 0px 5px rgb(101 129 115 / 45%), 
+        0 0px 5px rgb(101 129 115 / 50%),
+        0 1px 5px rgb(101 129 115 / 45%), 
+        0 1px 5px rgb(101 129 115 / 50%);*/
     box-shadow: 
-        0 0px 5px rgba(160 51 142 / 45%), 
+        0 0px 5px rgb(160 51 142 / 45%), 
         0 0px 5px rgb(160 51 142 / 50%),
-        0 1px 5px rgba(160 51 142 / 45%), 
+        0 1px 5px rgb(160 51 142 / 45%), 
         0 1px 5px rgb(160 51 142 / 50%);
 }
 
@@ -355,6 +362,10 @@ header #port-header h3, header #port-header h1{
 
 /** ALL FOR EXPERIENCE */
 
+#experience {
+    background-color: #237b9f;
+}
+
 #experience .work-experience {
     margin-top: 20px;
     margin-bottom: 40px;
@@ -457,6 +468,10 @@ header #port-header h3, header #port-header h1{
 }
 
 /* SKILLS */
+
+#skills{
+    background-color: #4a95ac;
+}
 
 #skills ul{
     list-style: none;
@@ -622,7 +637,8 @@ header #port-header h3, header #port-header h1{
 /* CONTACT */
 
 #contact{
-    background-color: skyblue;
+    /*background-color: skyblue;*/
+    background-color: #77b1bd;
     color: white;
     text-align: center;
     padding-bottom: 50px;
