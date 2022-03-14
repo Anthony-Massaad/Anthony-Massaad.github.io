@@ -677,6 +677,7 @@ footer p{
 
 footer .arrow-up{
     text-align: center;
+    position: relative;
     display: block;
     border-radius: 30px;
     width: 45px;
@@ -684,6 +685,8 @@ footer .arrow-up{
     border: 3px solid #337ab7;
     transition: 0.3s ease-in-out;
     margin-top: 8%;
+    cursor: pointer;
+    left: 35%;
 }
 
 footer .up-arrow{

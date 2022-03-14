@@ -131,6 +131,7 @@
     footer .arrow-up{
         margin-top: 0;
         margin-left: 44%;
+        left: auto;
     }
 }
 
