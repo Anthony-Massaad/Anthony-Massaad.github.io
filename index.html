@@ -10,11 +10,26 @@
         <link rel="stylesheet" href="styles/portStyles.css">
         <link rel="stylesheet" href="styles/media.css">
         <title>Anthony Massaad</title>
+        <noscript>
+            <style>
+                html{
+                    scroll-behavior: smooth;
+                }
+
+                #projects .project-content{
+                    display: block;
+                }
+
+                #projects #lst-projects{
+                    display: none;
+                }
+            </style>
+        </noscript>
     </head>
     <body>
         <nav id="fixed-nav">
             <a href="#top-page" id="name">Anthony Massaad</a>
-            
+
             <div class="menu-btn">
                 <div class="menu-btn-burger"></div> 
             </div>
@@ -36,6 +51,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul> 
         </nav>
+
         <header id="top-page">
             <div class="container">
                 <section id="port-header" >
@@ -76,8 +92,7 @@
             </div>
         </section>
 
-        <section id="experience" class="drop-section background-alternation ">
-
+        <section id="experience" class="drop-section background-alternation">
             <div class="container">
                 <div class="heading">
                     <h2>Experience</h2>
@@ -249,24 +264,8 @@
                         <li>Path Finding Algorithm</li>
                         <li>Sudoku Solver/Game</li>
                     </ul>
-                    <div id="project-content" class="project-display shadow single-proj">
-                        <div class="proj-img">
-                            <img src="images/project/Tetris.png" alt="">
-                        </div>
-                        <div class="project-info">
-                            <h3>Tetris</h3>
-                            <h4>Language(s): Python</h4>
-                            <ul>
-                                <li>GUI game tetris using the pygame module and Python.</li>
-                                <li>Implemented all of the features of the game such as rotations (use of linear algebra), speeding up, etc.</li>
-                                <li>Carefully commented the code for better understanding, and heavy use of OOP.</li>
-                            </ul>
-                            <a href="https://github.com/tony1bally/Tetris" target="_blank">View Project</a>
-                        </div>
-                    </div>
-
-                    <div class="all-projects">
-                        <div id="project-content" class="project-display shadow">
+                    <div class="project-content initial-display" name="Tetris"> 
+                        <div class="project-display shadow">
                             <div class="proj-img">
                                 <img src="images/project/Tetris.png" alt="">
                             </div>
@@ -281,14 +280,16 @@
                                 <a href="https://github.com/tony1bally/Tetris" target="_blank">View Project</a>
                             </div>
                         </div>
-
-                        <div id="project-content" class="project-display shadow">
+                    </div>
+                    
+                    <div class="project-content" name="Chat Bot">
+                        <div class="project-display shadow">
                             <div class="proj-img">
                                 <img src="images/project/ChatBot.png" alt="">
                             </div>
                             <div class="project-info">
                                 <h3>Chat Bot</h3>
-                                <h4>Language(s): Python</h4>
+                                <h4>Language(s): Python, JSON</h4>
                                 <ul>
                                     <li>
                                         Chat AI using PySimpleGUI as the GUI framework for user input and AI responses.
@@ -304,8 +305,10 @@
                                 <a href="https://github.com/tony1bally/ChatBot" target="_blank">View Project</a>
                             </div>
                         </div>
-
-                        <div id="project-content" class="project-display shadow">
+                    </div>
+                    
+                    <div class="project-content" name="Art Store">
+                        <div class="project-display shadow">
                             <div class="proj-img">
                                 <img src="images/project/PaintStore.png" alt="">
                             </div>
@@ -328,8 +331,10 @@
                                 <a href="https://github.com/tony1bally/Art-Store-Website" target="_blank">View Project</a>
                             </div>
                         </div>
-
-                        <div id="project-content" class="project-display shadow">
+                    </div>
+                    
+                    <div class="project-content" name="Virtual Shop">
+                        <div class="project-display shadow">
                             <div class="proj-img">
                                 <img src="images/project/VirtualShop.png" alt="">
                             </div>
@@ -353,8 +358,10 @@
                                 <a href="https://github.com/tony1bally/Store_Interface_java" target="_blank">View Project</a>
                             </div>
                         </div>
-                       
-                        <div id="project-content" class="project-display shadow">
+                    </div>
+                    
+                    <div class="project-content" name="Monopoly">
+                        <div  class="project-display shadow">
                             <div class="proj-img">
                                 <img src="images/project/Monopoly.png" alt="">
                             </div>
@@ -377,8 +384,10 @@
                                 <a href="https://github.com/tony1bally/SYSC3110MonopolyProject" target="_blank">View Project</a>
                             </div>
                         </div>
-                       
-                        <div id="project-content" class="project-display shadow">
+                    </div>
+                    
+                    <div class="project-content" name="Path Finding Algorithm">
+                        <div class="project-display shadow">
                             <div class="proj-img">
                                 <img src="images/project/PathAlgo.png" alt="">
                             </div>
@@ -394,11 +403,13 @@
                                         with the feature to enable the check for diagonal nodes that allows for a quicker path search.
                                     </li>
                                 </ul>
-                                <a href="" target="_blank">View Project</a>
+                                <a href="https://github.com/tony1bally/path-finding-algorithm-using-AStar" target="_blank">View Project</a>
                             </div>
                         </div>
-                       
-                        <div id="project-content" class="project-display shadow">
+                    </div>
+                    
+                    <div class="project-content" name="Sudoku Solver/Game">
+                        <div class="project-display shadow">
                             <div class="proj-img">
                                 <img src="images/project/Sedoku.png" alt="">
                             </div>
@@ -443,10 +454,11 @@
                         <img src="images/contact/linkedin-square.svg" alt="Linkedin logo">
                         <span>Anthony Massaad</span>
                     </a>
+                    <!--
                     <a href="https://www.instagram.com/tony1bally/" target="_blank" class="pad">
                         <img src="images/contact/instagram-icon-png-white-2.jpg" alt="Instagram logo">
                         <span>tony1bally</span>
-                    </a>
+                    </a>-->
                 </div>
             </div>
         </section>
@@ -458,13 +470,12 @@
                         <p>© 2022 Anthony Massaad.</p>
                     </div>
                     <div class="col-sm-2">
-                        <div class="arrow-up"><a href="#top-page" class="up-arrow"></a></div>
+                        <div class="footer-arrow-container"><a href="#top-page" class="arrow-up"><div class="up-arrow"></div></a></div>
                     </div>
                 </div>
             </div>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="javascript/project_info.js"></script>
         <script src="javascript/index.js"></script>
     </body>
 </html> 

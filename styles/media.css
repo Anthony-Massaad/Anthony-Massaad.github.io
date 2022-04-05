@@ -20,7 +20,7 @@
     header{
         height: auto;
         min-height: auto;
-        padding: 365px 15px;
+        padding: 475px 15px;
     }
 }
 
@@ -127,12 +127,6 @@
         text-align: center;
         list-style-position: inside;
     }
-
-    footer .arrow-up{
-        margin-top: 0;
-        margin-left: 44%;
-        left: auto;
-    }
 }
 
 @media only screen and (max-width: 570px){
@@ -191,15 +185,10 @@
 }
 
 @media only screen and (max-width: 480px){
-
-    #projects .all-projects{
+    #projects .project-content{
         display: block;
     }
-
-    #projects .single-proj{
-        display: none;
-    }
-
+    
     #projects #lst-projects{
         display: none;
     }
@@ -284,7 +273,6 @@
         padding-left: 6px;
         padding-right: 6px;
     }
-
 
     footer .copyright{
         font-size: 0.725em;

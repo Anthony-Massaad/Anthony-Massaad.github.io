@@ -1,7 +1,31 @@
+:root{
+    --BASE-TEMPLATE-COLOR: #434242;
+    --LESSER-BASE-COLOR: rgb(102, 101, 101);
+    --WHITE-COLOR: white; 
+    --HALF-WHITE-COLOR: rgba(255,255,255,0.5);
+    --BLUE-COLOR: blue;
+    --RED-COLOR: red; 
+    --SKYBLUE-COLOR: skyblue;
+    --BLACK-COLOR: black;
+    --VERY-DIM-BLACK-COLOR: rgb(0, 0, 0, 0.2);
+    --VERY-DIM-DARKRED-COLOR: rgba(156, 0, 0, 0.2);
+    --SALMON-BUTTON-TRANSITION: salmon;
+    --PURPLE-TRANSITION-COLOR: rgb(160, 51, 142);
+    --BLUE-1: #22A39F;
+    --BLUE-2: #337AB7;
+    --DIMMER-BLUE-1: rgba(34,163,159,0.35);
+    --OFF-WHITE: #F5F5F5;
+    --DATE-COLOR: #7E8890;
+    --SECTION-BORDER-COLOR: #DCD9D9;
+    --EXPERIENCE-BACKGROUND-COLOR: #237b9f;
+    --SKILLS-BACKGROUND-COLOR: #4a95ac;
+    --CONTACT-BACKGROUND-COLOR: #77b1bd;
+}
+
 body{
     margin-left: auto;
     margin-right: auto;
-    color: #434242;
+    color: var(--BASE-TEMPLATE-COLOR);
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -18,9 +42,34 @@ body{
 }
 
 @keyframes color-change{
-    0% {color:#337ab7}
-    50% {color:rgb(160, 51, 142)}
-    100%{color:#337ab7}
+    0% {color: var(--BLUE-2)}
+    50% {color: var(--PURPLE-TRANSITION-COLOR)}
+    100%{color: var(--BLUE-2)}
+}
+
+@keyframes arrow-bounce {
+    0%   { transform: translateY(0) rotate(45deg); }
+    25%  { transform: translateY(-4px) rotate(45deg); }
+    50% { transform: translateY(0) rotate(45deg); }
+    75%  { transform: translateY(-4px) rotate(45deg); }
+    100% { transform: translateY(0) rotate(45deg); }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--OFF-WHITE); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--SKYBLUE-COLOR); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--BLUE-1); 
 }
 
 a, a:hover{
@@ -33,7 +82,7 @@ h3{
 
 h2{
     font-size: 52px;
-    color: #22A39F;
+    color: var(--BLUE-1);
 }
 
 h5{
@@ -58,8 +107,8 @@ h5{
 }
 
 .link-btn{
-    border: 2px solid #f5f5f5;
-    background: linear-gradient(to right, rgb(153, 212, 231)  50%, salmon 50%) left;
+    border: 2px solid var(--OFF-WHITE);
+    background: linear-gradient(to right, var(--SKYBLUE-COLOR)  50%, var(--SALMON-BUTTON-TRANSITION) 50%) left;
     background-size: 200%;
     transition: .5s ease-out;
 }
@@ -74,7 +123,6 @@ h5{
 }
 
 .link-btn a{
-    color: #f5f5f5;
     font-size: 2rem;
     letter-spacing: 3px;
     text-align: center;
@@ -82,28 +130,22 @@ h5{
     text-decoration: none;
     padding: 0 10px;
     transition: 0.2s;
-    color: white;
+    color: var(--WHITE-COLOR);
 }
 
-
-.link-btn:hover{
-    background: linear-gradient(to left, salmon 50%, rgb(153, 212, 231) 50%) right;
+.link-btn:hover, .link-btn:focus{
+    background: linear-gradient(to left, var(--SALMON-BUTTON-TRANSITION) 50%, var(--SKYBLUE-COLOR) 50%) right;
     background-size: 200%;
     transition: .5s ease-out;
 }
 
-
-.background-alternation{
-    background-color: rgba(100,163,180,1);
-}
-
 .background-alternation .heading h2{
-    color: white;
+    color: var(--WHITE-COLOR);
 }
 
 .background-alternation .heading hr{
-    border-bottom: 1px solid white;
-    border-bottom-color: white;
+    border-bottom: 1px solid var(--WHITE-COLOR);
+    border-bottom-color: var(--WHITE-COLOR);
 }
 
 .block{
@@ -114,7 +156,7 @@ h5{
 .date{
     float: right;
     padding-right: 5%;
-    color: #7e8890;
+    color: var(--DATE-COLOR);
 }
 
 .heading{
@@ -130,22 +172,22 @@ h5{
 .heading hr{
     margin-top: 1rem;
     border: 0;
-    border-bottom: 1px solid #FFFFFF;
-    border-bottom-color: rgba(34,163,159,0.35);
+    border-bottom: 1px solid var(--WHITE-COLOR);
+    border-bottom-color: var(--DIMMER-BLUE-1);
 }
 
 .drop-section{
     overflow: hidden;
-    border-bottom: 1px solid #dcd9d9;
+    border-bottom: 1px solid var(--SECTION-BORDER-COLOR);
 }
 
 #fixed-nav{
     position: fixed;
     top: 0;
     z-index: 1030;
-    background-color: white;
-    border-bottom: 1px solid #FFFFFF;
-    border-bottom-color: rgba(34,163,159,0.35);
+    background-color: var(--WHITE-COLOR);
+    border-bottom: 1px solid var(--WHITE-COLOR);
+    border-bottom-color: var(--DIMMER-BLUE-1);
     width: 100%;
     animation-name: dropHeader;
     animation-iteration-count:1;
@@ -157,6 +199,7 @@ h5{
 #fixed-nav #name{
     animation: color-change 3s infinite;
     display: inline-block;
+    letter-spacing: 2px;
     margin: 0;
     line-height: inherit;
     font-size: 1.5em;
@@ -166,7 +209,7 @@ h5{
     font-weight: 800;
 }
 
-#fixed-nav #name:hover{
+#fixed-nav #name:hover, #fixed-nav #name:focus{
     text-decoration: underline;
 }
 
@@ -193,13 +236,14 @@ h5{
     width: 80px;
     height: 22px;
     font-weight: 700;
-    color: #22A39F;
+    color: var(--BLUE-1);
     line-height: 53px;
+    position: relative;
 }
 
-#fixed-nav ul li a:hover{
-    color: white;
-    background-color: #22A39F
+#fixed-nav ul li a:hover, #fixed-nav ul li a:focus{
+    color: var(--WHITE-COLOR);
+    background-color: var(--BLUE-1);
 }
 
 #fixed-nav .menu-btn {
@@ -218,7 +262,7 @@ h5{
 #fixed-nav .menu-btn-burger {
     width: 50px;
     height: 6px;
-    background: #22A39F;
+    background: var(--BLUE-1);
     border-radius: 5px;
     transition: all .5s ease-in-out;
 }
@@ -229,7 +273,7 @@ h5{
     position: absolute;
     width: 50px;
     height: 6px;
-    background: #22A39F;
+    background: var(--BLUE-1);
     border-radius: 5px;
     transition: all .5s ease-in-out;
 }
@@ -242,7 +286,6 @@ h5{
     transform: translateY(16px);
 }
 
-/* ANIMATION */
 #fixed-nav .menu-btn.open .menu-btn-burger {
     background: transparent;
     transition: 0.3s;
@@ -258,9 +301,9 @@ h5{
 
 #fixed-nav .sidebar{
     position: fixed;
-    background-color: white;
-    border-left: 1px solid #FFFFFF;
-    border-left-color: rgba(34,163,159,0.35);
+    background-color: var(--WHITE-COLOR);
+    border-left: 1px solid var(--WHITE-COLOR);
+    border-left-color: var(--DIMMER-BLUE-1);
     top: 0;
     bottom: 0;
     list-style: none;
@@ -296,6 +339,9 @@ header{
     max-height: 1080px;
     overflow: hidden;
     background-image: url("../images/heading/LeadBackground2.png");
+    -o-background-size:cover; 
+    -moz-background-size:cover; 
+    -webkit-background-size:cover; 
     background-size: cover;
 }
 
@@ -311,14 +357,14 @@ header #port-header{
 header #port-header h1{
     font-weight: 900;
     font-size: 5em;
-    color: white;
+    color: var(--WHITE-COLOR);
     padding: 2px;
 }
 
 header #port-header h3{
     font-size: 1.75em;
     font-weight: 800;
-    color: rgb(255, 255, 255);
+    color: var(--WHITE-COLOR);
 }
 
 header #port-header h3, header #port-header h1{
@@ -338,13 +384,13 @@ header #port-header h3, header #port-header h1{
 }
 
 #about img{
-    min-width: 230px;
+    min-width: 100px;
     max-width: 230px;
-    width: 100%;
+    width: 60%;
     height: 100%;
     margin-top: -11px;
-    background-color: skyblue;
-    border-radius: 90px;
+    background-color: var(--SKYBLUE-COLOR);
+    border-radius: 50%;
 }
 
 #about .prof-img{
@@ -354,17 +400,17 @@ header #port-header h3, header #port-header h1{
 /** ALL FOR EXPERIENCE */
 
 #experience {
-    background-color: #237b9f;
+    background-color: var(--EXPERIENCE-BACKGROUND-COLOR);
 }
 
 #experience .work-experience {
     margin-top: 20px;
     margin-bottom: 40px;
-    background-color: white;
+    background-color: var(--WHITE-COLOR);
     font-weight: 400;
     line-height: 1.8;
     padding: 15px;
-    border: 2px solid rgba(0,0,0,0.2);
+    border: 2px solid var(--VERY-DIM-BLACK-COLOR);
 }
 
 #experience .work-experience img{
@@ -375,7 +421,7 @@ header #port-header h3, header #port-header h1{
     width: 100%;
     margin-right: 20px;
     border-radius: 20px;
-    background-color: black;
+    background-color: var(--BLACK-COLOR);
 }
 
 #experience .work-experience h3{
@@ -386,7 +432,7 @@ header #port-header h3, header #port-header h1{
 
 #experience .work-experience h4{
     font-weight: 800;
-    color: rgb(102, 101, 101);
+    color: var(--LESSER-BASE-COLOR);
     margin-bottom: 50px;
 }
 
@@ -413,11 +459,10 @@ header #port-header h3, header #port-header h1{
 #education .education-block {
     max-width: 700px;
     padding: 15px;
-    border: 1px solid #dcd9d9;
     margin: 0 auto 10px auto; 
     text-align: left;
-    background-color: white;
-    border: 2px solid rgba(0,0,0,0.15);
+    background-color: var(--WHITE-COLOR);
+    border: 2px solid var(--VERY-DIM-BLACK-COLOR);
 }
 
 #education .ed-logo img{
@@ -427,7 +472,7 @@ header #port-header h3, header #port-header h1{
     margin-right: 30px;
     border-radius: 20px;
     height: 10%;
-    background-color: black;
+    background-color: var(--BLACK-COLOR);
 }
 
 .education-block ul {
@@ -441,27 +486,27 @@ header #port-header h3, header #port-header h1{
 
 #education .grades{
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid var(--BLACK-COLOR);
     font-weight: 700;
-    background: linear-gradient(to right, transparent  50%, salmon 50%) left;
-    background-size: 200%;
+    background: linear-gradient(to right, transparent  50%, var(--SALMON-BUTTON-TRANSITION) 50%) left;
+    background-size: 210%;
     margin-top: 20px;
 }
 
-#education .grades:hover{
-    background: linear-gradient(to left, salmon  50%, transparent 50%) right;
-    background-size: 200%;
+#education .grades:hover, #education .grades:focus{
+    background: linear-gradient(to left, var(--SALMON-BUTTON-TRANSITION)  50%, transparent 50%) right;
+    background-size: 210%;
     transition: .5s ease-out;
 }
 
 #education .grades a{
-    color: black;
+    color: var(--BLACK-COLOR);
 }
 
 /* SKILLS */
 
 #skills{
-    background-color: #4a95ac;
+    background-color: var(--SKILLS-BACKGROUND-COLOR);
 }
 
 #skills ul{
@@ -490,12 +535,12 @@ header #port-header h3, header #port-header h1{
     padding: 3px;
     height: 25px;
     width: 100%;
-    border: 4px solid white;
+    border: 4px solid var(--WHITE-COLOR);
 }
 
 #skills li .meter .bar {
     display: block;
-    background-color: white;
+    background-color: var(--WHITE-COLOR);
     height: 100%;
     width: 0%;
 }
@@ -517,10 +562,10 @@ header #port-header h3, header #port-header h1{
     display: inline-block;
     margin: 7px;
     padding: 5px 10px;
-    color: #22A39F;
+    color: var(--BLUE-1);
     background-color: transparent;
     font-size: 1.1em;
-    border: 3px solid rgba(156, 0, 0, 0.2);
+    border: 3px solid var(--VERY-DIM-DARKRED-COLOR);
     transition: 0.5s ease all;
     font-weight: 600;
 }
@@ -529,17 +574,17 @@ header #port-header h3, header #port-header h1{
     cursor: pointer;
 }
 
-#projects #lst-projects li:hover:not(.selected){
-    color: white;
+#projects #lst-projects li:hover:not(.selected), #projects #lst-projects li:focus:not(.selected){
+    color: var(--WHITE-COLOR);
     font-weight: 700;
-    background-color: #22A39F;
+    background-color: var(--BLUE-1);
     transition: 0.5s ease all;
-    border: 3px solid rgba(255, 255, 255, 0.5);
+    border: 3px solid var(--HALF-WHITE-COLOR);
 }
 
 #projects #lst-projects .selected{
-    background-color: #22A39F;
-    color: white;
+    background-color: var(--BLUE-1);
+    color: var(--WHITE-COLOR);
     font-weight: 700;
 }
 
@@ -549,7 +594,7 @@ header #port-header h3, header #port-header h1{
     display: flex;
     margin: 20px auto 15px auto;
     overflow: hidden;
-    background: #fff;
+    background: var(--WHITE-COLOR);
 }
 
 #projects .project-info{
@@ -572,10 +617,21 @@ header #port-header h3, header #port-header h1{
     margin-left: 10%;
 }
 
-#projects .all-projects{
+#projects .project-content{
     display: none;
 }
 
+#projects .initial-display{
+    display: block;
+}
+
+#projects .display-none{
+    display: none;
+}
+
+#projects .display-block{
+    display: block;
+}
 
 #projects .project-display h3, #projects .project-display h4, #projects .project-display a{
     position: relative;
@@ -608,40 +664,40 @@ header #port-header h3, header #port-header h1{
 }
 
 #projects .project-display a{
-    color: blue;
+    color: var(--BLUE-COLOR);
     display: block;
     text-align: center;
+    width: fit-content;
+    margin: 0 auto 0 auto;
+    padding: 5px;
 }
 
-
 #projects .project-display h4{
-    color: #374054;
+    color: var(--LESSER-BASE-COLOR);
     margin: 0;
 }
 
-#projects .project-display a:hover{
-    color: red;
+#projects .project-display a:hover, #projects .project-display a:focus{
+    color: var(--RED-COLOR);
     text-decoration: underline;
 }
-
 
 /* CONTACT */
 
 #contact{
-    /*background-color: skyblue;*/
-    background-color: #77b1bd;
-    color: white;
+    background-color: var(--CONTACT-BACKGROUND-COLOR);
+    color: var(--WHITE-COLOR);
     text-align: center;
     padding-bottom: 50px;
 }
 
 #contact .heading hr{
-    border-top: 2px solid white;
+    border-top: 2px solid var(--WHITE-COLOR);
 }
 
 #contact a{
     text-decoration: none;
-    color: white;
+    color: var(--WHITE-COLOR);
     display: inline-block;
     padding-right: 10px;
     opacity: 1;
@@ -653,7 +709,7 @@ header #port-header h3, header #port-header h1{
     padding-left: 30px;
 }
 
-#contact a:hover{
+#contact a:hover, #contact a:focus{
     opacity: 0.8;
 }
 
@@ -665,13 +721,13 @@ header #port-header h3, header #port-header h1{
 /* FOOTER */
 
 footer{
-    background-color: white;
+    background-color: var(--WHITE-COLOR);
     padding: 10px;
     font-size: 20px;
 }
 
 footer p{
-    color: #337ab7;
+    color: var(--BLUE-2);
     padding-left: 15px;
 }
 
@@ -682,33 +738,31 @@ footer .arrow-up{
     border-radius: 30px;
     width: 45px;
     height: 45px;
-    border: 3px solid #337ab7;
-    transition: 0.3s ease-in-out;
-    margin-top: 8%;
+    border: 3px solid var(--BLUE-2);
+    margin-top: 10px;
     cursor: pointer;
-    left: 35%;
+}
+
+footer .footer-arrow-container{
+    text-align: center;
+    width: fit-content;
+    margin: auto;
 }
 
 footer .up-arrow{
     border-style: solid;
-    margin-right: auto;
     display: inline-block;
     position: relative;
     top: 35%;
-    border-color: #337ab7;
+    border-color: var(--BLUE-2);
     width: 20px;
     height: 20px;
     border-width: 3px 0 0 3px;
     transform: rotate(45deg);
-    transition: 0.3s ease-in-out;
-}
-
-
-footer .arrow-up:hover{
-    box-shadow: inset 0 0 0 2px #337ab7;
-
 }
 
 footer .arrow-up:hover .up-arrow{
-    border-width: 3.5px 0 0 3.5px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow-bounce;
 }

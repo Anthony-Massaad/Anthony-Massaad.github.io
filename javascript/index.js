@@ -8,7 +8,7 @@ function scroll(element){
         'slow');
 }
 
-$("footer .arrow-up a").click(function(){
+$("footer a").click(function(){
     scroll($(this));
 });
 
@@ -20,8 +20,16 @@ $("#fixed-nav a").click(function(){
 $("#lst-projects li").click(function(){
     $(".selected").removeClass("selected");
     $(this).addClass("selected");
-    var divText = PROJECTS[$(this).html()];
-    $("#project-content").html(divText);
+    $(".project-content").removeClass("display-block");
+    $(".project-content").removeClass("display-none");
+    $(".project-content").addClass("display-none");
+    for (var i = 0; i<$(".project-content").length; i++){
+        if ($($(".project-content")[i]).attr("name") == $(this).html()){
+            $($(".project-content")[i]).addClass("display-block");
+        }
+    }
+    //var divText = PROJECTS[$(this).html()];
+    //$("#project-content").html(divText);
 }); 
 
 let menuOpen = false;
