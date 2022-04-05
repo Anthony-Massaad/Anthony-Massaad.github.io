@@ -20,7 +20,7 @@
     header{
         height: auto;
         min-height: auto;
-        padding: 475px 15px;
+        padding: 365px 15px;
     }
 }
 
@@ -188,7 +188,7 @@
     #projects .project-content{
         display: block;
     }
-    
+
     #projects #lst-projects{
         display: none;
     }
