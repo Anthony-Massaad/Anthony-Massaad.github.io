@@ -32,11 +32,38 @@ body{
     padding: 0;
 }
 
-@keyframes dropHeader{
+@keyframes dropheader{
+    0%{transform:translateY(-100%)}100%{transform:translateY(0)}
+}
+
+@-webkit-keyframes dropheader{
+    0%{transform:translateY(-100%)}100%{transform:translateY(0)}
+}
+
+@-moz-keyframes dropheader{
+    0%{transform:translateY(-100%)}100%{transform:translateY(0)}
+}
+
+@-o-keyframes dropheader{
     0%{transform:translateY(-100%)}100%{transform:translateY(0)}
 }
 
 @keyframes fadein{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes fadein{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-moz-keyframes fadein{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-o-keyframes fadein{
     from {opacity: 0;}
     to {opacity: 1;}
 }
@@ -47,12 +74,55 @@ body{
     100%{color: var(--BLUE-2)}
 }
 
+@-webkit-keyframes color-change{
+    0% {color: var(--BLUE-2)}
+    50% {color: var(--PURPLE-TRANSITION-COLOR)}
+    100%{color: var(--BLUE-2)}
+}
+
+@-moz-keyframes color-change{
+    0% {color: var(--BLUE-2)}
+    50% {color: var(--PURPLE-TRANSITION-COLOR)}
+    100%{color: var(--BLUE-2)}
+}
+
+@-o-keyframes color-change{
+    0% {color: var(--BLUE-2)}
+    50% {color: var(--PURPLE-TRANSITION-COLOR)}
+    100%{color: var(--BLUE-2)}
+}
+
+
 @keyframes arrow-bounce {
-    0%   { transform: translateY(0) rotate(45deg); }
-    25%  { transform: translateY(-4px) rotate(45deg); }
-    50% { transform: translateY(0) rotate(45deg); }
-    75%  { transform: translateY(-4px) rotate(45deg); }
-    100% { transform: translateY(0) rotate(45deg); }
+    0%   { transform: scale(1) rotate(45deg); }
+    25%  { transform: scale(0.9) rotate(45deg); }
+    50% { transform: scale(1) rotate(45deg); }
+    75%  { transform: scale(0.9) rotate(45deg); }
+    100% { transform: scale(1) rotate(45deg); }
+}
+
+@-webkit-keyframes arrow-bounce{
+    0%   { transform: scale(1) rotate(45deg); }
+    25%  { transform: scale(0.9) rotate(45deg); }
+    50% { transform: scale(1) rotate(45deg); }
+    75%  { transform: scale(0.9) rotate(45deg); }
+    100% { transform: scale(1) rotate(45deg); }
+}
+
+@-moz-keyframes arrow-bounce{
+    0%   { transform: scale(1) rotate(45deg); }
+    25%  { transform: scale(0.9) rotate(45deg); }
+    50% { transform: scale(1) rotate(45deg); }
+    75%  { transform: scale(0.9) rotate(45deg); }
+    100% { transform: scale(1) rotate(45deg); }
+}
+
+@-o-keyframes arrow-bounce{
+    0%   { transform: scale(1) rotate(45deg); }
+    25%  { transform: scale(0.9) rotate(45deg); }
+    50% { transform: scale(1) rotate(45deg); }
+    75%  { transform: scale(0.9) rotate(45deg); }
+    100% { transform: scale(1) rotate(45deg); }
 }
 
 ::-webkit-scrollbar {
@@ -74,6 +144,11 @@ body{
 
 a, a:hover{
     text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+    outline-offset: 0px;
 }
 
 h3{
@@ -111,32 +186,34 @@ h5{
     background: linear-gradient(to right, var(--SKYBLUE-COLOR)  50%, var(--SALMON-BUTTON-TRANSITION) 50%) left;
     background-size: 200%;
     transition: .5s ease-out;
-}
-
-.link-btn img{
-    width: auto;
-    height: 25px;;
-    position: relative;
-    right: 3%;
-    transition: 0.2s;
-    padding-bottom: 4px;
-}
-
-.link-btn a{
+    -webkit-transition: .5s ease-out;
+    -moz-transition: .5s ease-out;
+    -o-transition: .5s ease-out;
     font-size: 2rem;
     letter-spacing: 3px;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
     padding: 0 10px;
-    transition: 0.2s;
     color: var(--WHITE-COLOR);
 }
 
-.link-btn:hover, .link-btn:focus{
+.link-btn img{
+    width: auto;
+    height: 25px;;
+    position: relative;
+    right: 0;
+    padding-bottom: 4px;
+}
+
+.link-btn:hover{
     background: linear-gradient(to left, var(--SALMON-BUTTON-TRANSITION) 50%, var(--SKYBLUE-COLOR) 50%) right;
     background-size: 200%;
     transition: .5s ease-out;
+    -webkit-transition: .5s ease-out;
+    -moz-transition: .5s ease-out;
+    -o-transition: .5s ease-out;
+    color: var(--WHITE-COLOR);
 }
 
 .background-alternation .heading h2{
@@ -189,15 +266,18 @@ h5{
     border-bottom: 1px solid var(--WHITE-COLOR);
     border-bottom-color: var(--DIMMER-BLUE-1);
     width: 100%;
-    animation-name: dropHeader;
-    animation-iteration-count:1;
-    animation-timing-function:ease;
-    animation-duration: 0.75s;
+    animation: dropheader 0.75s ease;
+    -webkit-animation: dropheader 0.75s ease;
+    -moz-animation: dropheader 0.75s ease;
+    -o-animation: dropheader 0.75s ease;
     overflow: hidden;
 }
 
 #fixed-nav #name{
     animation: color-change 3s infinite;
+    -webkit-animation: color-change 3s infinite;
+    -moz-animation: color-change 3s infinite;
+    -o-animation: color-change 3s infinite;
     display: inline-block;
     letter-spacing: 2px;
     margin: 0;
@@ -209,7 +289,7 @@ h5{
     font-weight: 800;
 }
 
-#fixed-nav #name:hover, #fixed-nav #name:focus{
+#fixed-nav #name:hover{
     text-decoration: underline;
 }
 
@@ -241,7 +321,7 @@ h5{
     position: relative;
 }
 
-#fixed-nav ul li a:hover, #fixed-nav ul li a:focus{
+#fixed-nav ul li a:hover{
     color: var(--WHITE-COLOR);
     background-color: var(--BLUE-1);
 }
@@ -254,7 +334,10 @@ h5{
     width: 60px;
     height: 50px;
     cursor: pointer;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
     display: none;
     z-index: 1000;
 }
@@ -264,7 +347,10 @@ h5{
     height: 6px;
     background: var(--BLUE-1);
     border-radius: 5px;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
 }
 
 #fixed-nav .menu-btn-burger::before,
@@ -273,59 +359,48 @@ h5{
     position: absolute;
     width: 50px;
     height: 6px;
-    background: var(--BLUE-1);
+    background-color: var(--BLUE-1);
     border-radius: 5px;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
 }
 
 #fixed-nav .menu-btn-burger::before {
     transform: translateY(-16px);
+    -webkit-transform: translateY(-16px);
+    -moz-transform: translateY(-16px);
+    -o-transform: translateY(-16px);
 }
 
 #fixed-nav .menu-btn-burger::after {
     transform: translateY(16px);
+    -webkit-transform: translateY(16px);
+    -moz-transform: translateY(16px);
+    -o-transform: translateY(16px);
 }
 
 #fixed-nav .menu-btn.open .menu-btn-burger {
-    background: transparent;
+    background-color: transparent;
     transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 
 #fixed-nav .menu-btn.open .menu-btn-burger::before {
     transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
 }
 
 #fixed-nav .menu-btn.open .menu-btn-burger::after {
     transform: rotate(-45deg);
-}
-
-#fixed-nav .sidebar{
-    position: fixed;
-    background-color: var(--WHITE-COLOR);
-    border-left: 1px solid var(--WHITE-COLOR);
-    border-left-color: var(--DIMMER-BLUE-1);
-    top: 0;
-    bottom: 0;
-    list-style: none;
-    height: 100%;
-    padding: 1em 1.5em;
-    z-index: 101;
-    left: 100%;
-    display: none;
-    width: 30%;
-}
-
-#fixed-nav .sidebar.active{
-    left: 75%;
-    transition: left 0.5s;
-}
-
-#fixed-nav .sidebar:not(.active){
-    transition: left 0.5s;
-}
-
-#fixed-nav .sidebar li{
-    margin-top: 20px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
 }
 
 header{
@@ -349,8 +424,14 @@ header #port-header{
     position: absolute;
     left: 50%;
     top: 48%;   
-    animation: fadein 2s;
+    animation: fadein 2s forwards;
+    -webkit-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    -moz-animation: fadein 1s; 
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, -50%);
     padding: 20px;
 }
 
@@ -373,8 +454,6 @@ header #port-header h3, header #port-header h1{
     overflow: hidden;
 } 
 
-/**ABOUT **/
-
 #about{
     padding-bottom: 1.5%;
 }
@@ -396,8 +475,6 @@ header #port-header h3, header #port-header h1{
 #about .prof-img{
     text-align: center;
 }
-
-/** ALL FOR EXPERIENCE */
 
 #experience {
     background-color: var(--EXPERIENCE-BACKGROUND-COLOR);
@@ -450,8 +527,6 @@ header #port-header h3, header #port-header h1{
     padding: 0 0 0 15px;
 }
 
-/* EDUCATION */
-
 #education{
     padding-bottom: 30px;
 }
@@ -463,6 +538,7 @@ header #port-header h3, header #port-header h1{
     text-align: left;
     background-color: var(--WHITE-COLOR);
     border: 2px solid var(--VERY-DIM-BLACK-COLOR);
+    margin-bottom: 30px;
 }
 
 #education .ed-logo img{
@@ -490,20 +566,21 @@ header #port-header h3, header #port-header h1{
     font-weight: 700;
     background: linear-gradient(to right, transparent  50%, var(--SALMON-BUTTON-TRANSITION) 50%) left;
     background-size: 210%;
-    margin-top: 20px;
+    color: var(--BLACK-COLOR);
 }
 
-#education .grades:hover, #education .grades:focus{
+#education .grades:hover{
     background: linear-gradient(to left, var(--SALMON-BUTTON-TRANSITION)  50%, transparent 50%) right;
     background-size: 210%;
     transition: .5s ease-out;
+    -webkit-transition: .5s ease-out;
+    -moz-transition: .5s ease-out;
+    -o-transition: .5s ease-out;
 }
 
 #education .grades a{
     color: var(--BLACK-COLOR);
 }
-
-/* SKILLS */
 
 #skills{
     background-color: var(--SKILLS-BACKGROUND-COLOR);
@@ -545,8 +622,6 @@ header #port-header h3, header #port-header h1{
     width: 0%;
 }
 
-/* PROJECTS */ 
-
 #projects{
     text-align: center;
 }
@@ -567,6 +642,9 @@ header #port-header h3, header #port-header h1{
     font-size: 1.1em;
     border: 3px solid var(--VERY-DIM-DARKRED-COLOR);
     transition: 0.5s ease all;
+    -webkit-transition: 0.5s ease all;
+    -moz-transition: 0.5s ease all;
+    -o-transition: 0.5s ease all;
     font-weight: 600;
 }
 
@@ -574,11 +652,10 @@ header #port-header h3, header #port-header h1{
     cursor: pointer;
 }
 
-#projects #lst-projects li:hover:not(.selected), #projects #lst-projects li:focus:not(.selected){
+#projects #lst-projects li:hover:not(.selected){
     color: var(--WHITE-COLOR);
     font-weight: 700;
     background-color: var(--BLUE-1);
-    transition: 0.5s ease all;
     border: 3px solid var(--HALF-WHITE-COLOR);
 }
 
@@ -677,12 +754,10 @@ header #port-header h3, header #port-header h1{
     margin: 0;
 }
 
-#projects .project-display a:hover, #projects .project-display a:focus{
+#projects .project-display a:hover{
     color: var(--RED-COLOR);
     text-decoration: underline;
 }
-
-/* CONTACT */
 
 #contact{
     background-color: var(--CONTACT-BACKGROUND-COLOR);
@@ -709,7 +784,7 @@ header #port-header h3, header #port-header h1{
     padding-left: 30px;
 }
 
-#contact a:hover, #contact a:focus{
+#contact a:hover{
     opacity: 0.8;
 }
 
@@ -717,8 +792,6 @@ header #port-header h3, header #port-header h1{
     height: 40px;
     width: 40px;
 }
-
-/* FOOTER */
 
 footer{
     background-color: var(--WHITE-COLOR);
@@ -758,11 +831,8 @@ footer .up-arrow{
     width: 20px;
     height: 20px;
     border-width: 3px 0 0 3px;
-    transform: rotate(45deg);
-}
-
-footer .arrow-up:hover .up-arrow{
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-name: arrow-bounce;
+    animation: arrow-bounce 2s infinite;
+    -webkit-animation: arrow-bounce 2s infinite;
+    -moz-animation: arrow-bounce 2s infinite;
+    -o-animation: arrow-bounce 2s infinite;
 }

@@ -34,7 +34,7 @@ $("#lst-projects li").click(function(){
 
 let menuOpen = false;
 $('#fixed-nav .menu-btn').click(function(){
-    var sidebar = $("#fixed-nav .sidebar");
+    var sidebar = $("#fixed-nav .reg-nav");
     if(!menuOpen) {
         $(this).addClass("open");
         sidebar.addClass("active");
@@ -45,8 +45,8 @@ $('#fixed-nav .menu-btn').click(function(){
     menuOpen = !menuOpen;
 });
 
-$("#fixed-nav .sidebar a").click(function(){
-    $("#fixed-nav .sidebar").removeClass("active")
+$("#fixed-nav .reg-nav a").click(function(){
+    $("#fixed-nav .reg-nav").removeClass("active")
     $("#fixed-nav .menu-btn").removeClass("open");
     menuOpen = !menuOpen;
 });

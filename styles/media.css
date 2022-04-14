@@ -2,18 +2,40 @@
     #fixed-nav .menu-btn{
         display: flex;
     }  
-    
-    #fixed-nav .reg-nav{
-        display: none;
-    }
 
-    #fixed-nav .sidebar{
+    #fixed-nav ul{
         display: block;
     }
 
-    #fixed-nav .sidebar li{
+    #fixed-nav .reg-nav{
+        position: fixed;
+        background-color: var(--WHITE-COLOR);
+        border-left: 1px solid var(--WHITE-COLOR);
+        border-left-color: var(--DIMMER-BLUE-1);
+        top: 0;
+        bottom: 0;
+        list-style: none;
+        height: 100%;
+        padding: 1em 1.5em;
+        z-index: 101;
+        left: 100%;
+        width: 30%;
+    }
+    
+    #fixed-nav .reg-nav.active{
+        left: 75%;
+        transition: left 0.5s;
+    }
+    
+    #fixed-nav .reg-nav:not(.active){
+        transition: left 0.5s;
+    }
+    
+    #fixed-nav .reg-nav li{
+        margin-top: 20px;
         display: list-item;
     }
+
 }
 
 @media only screen and (max-width: 992px){
@@ -44,10 +66,10 @@
 
 @media only screen and (max-width: 768px){
     
-    #fixed-nav .sidebar{
+    #fixed-nav .reg-nav{
         width: 40%;
     }
-    #fixed-nav .sidebar.active{
+    #fixed-nav .reg-nav.active{
         left: 70%;
     }
 
@@ -71,9 +93,10 @@
     }
 
     #projects .project-display .proj-img img{
-        height: fit-content;
-        width: 10em;
-        border-radius: 50px;
+        width: 8em;
+        border-radius: 50%;
+        height: 8em;
+        border: 2px solid var(--BLUE-2);
     }
 
     #projects .project-info{
@@ -130,11 +153,11 @@
 }
 
 @media only screen and (max-width: 570px){
-    #fixed-nav .sidebar{
+    #fixed-nav .reg-nav{
         width: 50%;
     }
     
-    #fixed-nav .sidebar.active{
+    #fixed-nav .reg-nav.active{
         left: 60%;
     }
 
@@ -197,10 +220,10 @@
         font-size: 1.12em;
     }
 
-    #fixed-nav .sidebar{
+    #fixed-nav .reg-nav{
         width: 80%;
     }
-    #fixed-nav .sidebar.active{
+    #fixed-nav .reg-nav.active{
         left: 30%;
     }
 
@@ -254,11 +277,11 @@
         margin: 0;
     }
 
-    header #port-header .link-btn a{
+    .link-btn{
         font-size: 0.925em;
     }
 
-    header #port-header .link-btn img{
+    .link-btn img{
         height: 20px;
     }
 
