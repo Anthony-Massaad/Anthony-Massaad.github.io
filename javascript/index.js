@@ -1,6 +1,7 @@
-const PROJECT_SELECTED_TXT = ".selected";
-
-// function for scrolling when nav
+/**
+ * Function for smooth scrolling based on anchor tag href
+ * @param {anchor tag} element, ideally and anchor tag to smooth scroll
+ */
 function scroll(element){
     var elementToScroll = element.attr("href");
     $('html, body').animate({
@@ -8,10 +9,12 @@ function scroll(element){
         'slow');
 }
 
+// For on click anchor tag in the footer
 $("footer a").click(function(){
     scroll($(this));
 });
 
+// For on click anchor tag in the navigation
 $("#fixed-nav a").click(function(){
     scroll($(this));
 });
@@ -26,12 +29,12 @@ $("#lst-projects li").click(function(){
     for (var i = 0; i<$(".project-content").length; i++){
         if ($($(".project-content")[i]).attr("name") == $(this).html()){
             $($(".project-content")[i]).addClass("display-block");
+            return;
         }
     }
-    //var divText = PROJECTS[$(this).html()];
-    //$("#project-content").html(divText);
 }); 
 
+// Handle the hamburger button on click events
 let menuOpen = false;
 $('#fixed-nav .menu-btn').click(function(){
     var sidebar = $("#fixed-nav .reg-nav");
@@ -45,6 +48,8 @@ $('#fixed-nav .menu-btn').click(function(){
     menuOpen = !menuOpen;
 });
 
+// Handle the click event on the anchor tag for navigation 
+// When hamburger button is enabled, on anchor click, close the hamburger button
 $("#fixed-nav .reg-nav a").click(function(){
     $("#fixed-nav .reg-nav").removeClass("active")
     $("#fixed-nav .menu-btn").removeClass("open");
